@@ -131,7 +131,7 @@ public class TaskController {
 
             }
         } catch (Exception ex) {
-            throw new RuntimeException("Erro ao buscar a tarefa" + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao buscar as tarefas" + ex.getMessage(), ex);
         } finally {
             ConnectionFactory.closeConnection(conn, statement, resultSet);
         }
