@@ -29,8 +29,8 @@ public class ProjectController {
             statement = conn.prepareStatement(sql);
             statement.setString(1, project.getName());
             statement.setString(2, project.getDescription());
-            statement.setDate(7, new Date(project.getCreatedAt().getTime()));
-            statement.setDate(8, new Date(project.getUpdatedAt().getTime()));
+            statement.setDate(3, new Date(project.getCreatedAt().getTime()));
+            statement.setDate(4, new Date(project.getUpdatedAt().getTime()));
             statement.execute();
         } catch (Exception ex) {
             throw new RuntimeException("Erro ao salvar o projeto " + ex.getMessage(), ex);
@@ -107,7 +107,7 @@ public class ProjectController {
                 project.setId(resultSet.getInt("id"));
                 project.setName(resultSet.getString("name"));
                 project.setDescription(resultSet.getString("description"));
-                project.setCreatedAt(resultSet.getDate("createAt"));
+                project.setCreatedAt(resultSet.getDate("createdAt"));
                 project.setUpdatedAt(resultSet.getDate("updatedAt"));
                 
                 projects.add(project);

@@ -3,17 +3,63 @@
  */
 package TodoApp;
 
-import java.sql.Connection;
-import util.ConnectionFactory;
+import controller.ProjectController;
+import controller.TaskController;
+import java.util.Date;
+import java.util.List;
+import model.Project;
+import model.Task;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-        Connection c = ConnectionFactory.getConnection();
-        ConnectionFactory.closeConnection(c);
+        
+//        ProjectController projectController = new ProjectController();
+//        
+//        Project project = new Project();
+//        project.setName("Projeto teste");
+//        project.setDescription("description");
+//        projectController.save(project);
+//        
+//        project.setId(1);
+//        project.setName("Novo nome do projeto");
+//        project.setDescription("description");
+//        projectController.update(project);
+//        
+//        List<Project> projects = projectController.getAll();
+//        System.out.println("Total de projetos = " + projects.size());
+//        
+//        projectController.removeById(2);
+
+
+
+
+//        TaskController taskController = new TaskController();
+//        
+//        Task task = new Task();
+//        task.setIdProject(2);
+//        task.setName("Tarefa teste");
+//        task.setDescription("descrição da tarefa");
+//        task.setIsCompleted(false);
+//        task.setNotes("Sem notas");
+//        task.setDeadline(new Date());
+//        
+//        taskController.save(task);
+//
+//        task.setId(1);
+//        task.setIdProject(2);
+//        task.setName("Novo nome da tarefa");
+//        task.setDescription("descrição da tarefa");
+//        task.setIsCompleted(false);
+//        task.setNotes("Sem notas");
+//        task.setDeadline(new Date());
+//        
+//        taskController.update(task);
+//
+//        List<Task> tasks = taskController.getAll(2);
+//        System.out.println("Total de tarefas = " + tasks.size());
+
+//        taskController.removeById(1);
+
     }
 }
